@@ -1,0 +1,99 @@
+/* Estilo Tiempo de Descuento - Verde Vibrante */
+body {
+    background-color: #080a08; /* Negro casi total para que el verde resalte */
+    color: #ffffff;
+    font-family: 'Arial', sans-serif; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+header h1 {
+    color: #2dfc52; /* Verde vibrante de la imagen */
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(45, 252, 82, 0.5); /* Resplandor verde */
+}
+
+header p {
+    color: #aaaaaa;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+/* La tarjeta central */
+.streaming-card {
+    background: #111111;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.9);
+    width: 90%;
+    max-width: 450px;
+    border: 1px solid #1a1a1a;
+    border-top: 4px solid #2dfc52; /* Línea verde vibrante */
+    text-align: center;
+}
+
+/* El indicador de estado (Badge) */
+.status-badge {
+    background-color: #2dfc52; /* Verde vibrante */
+    color: #000; /* Texto negro para que se lea bien sobre el verde */
+    padding: 5px 15px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.75rem;
+    display: inline-block;
+    margin-bottom: 20px;
+    animation: pulse-green 2s infinite;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #2dfc52;
+    opacity: 0.2;
+    margin: 20px 0;
+}
+
+/* Etiquetas en blanco, datos en verde */
+p strong {
+    color: #ffffff;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+.data-text {
+    color: #2dfc52; /* Dato en verde vibrante */
+    display: block;
+    font-size: 1.3rem;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.time {
+    margin-top: 25px;
+    color: #2dfc52;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+/* Animación de pulso neón */
+@keyframes pulse-green {
+    0% { box-shadow: 0 0 0 0 rgba(45, 252, 82, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(45, 252, 82, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(45, 252, 82, 0); }
+}
