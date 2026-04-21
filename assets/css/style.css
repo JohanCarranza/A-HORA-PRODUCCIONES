@@ -25,13 +25,14 @@ body {
     font-family: 'Special Elite', cursive;
 }
 
+/* CONTENEDOR */
 .container {
     width: min(90%, 1000px);
     margin: 0 auto;
     padding: 40px 0;
 }
 
-/* HERO */
+/* ================= HERO ================= */
 .hero {
     min-height: 100vh;
     background:
@@ -45,6 +46,8 @@ body {
 .hero-content {
     text-align: center;
     color: white;
+    max-width: 760px;
+    margin: 0 auto;
 }
 
 .hero-tag {
@@ -114,14 +117,14 @@ body {
     transform: translate(-2px, -2px);
 }
 
-/* SECCIONES */
+/* ================= SECCIONES ================= */
 .tape-label {
     background: var(--ink);
     color: white;
     padding: 6px 14px;
     display: inline-block;
     transform: rotate(-2deg);
-    margin-bottom: -10px;
+    margin-bottom: -14px;
     font-size: 0.9rem;
 }
 
@@ -130,10 +133,24 @@ body {
     border: 4px solid var(--ink);
     padding: 25px;
     box-shadow: 10px 10px 0px var(--ink);
-    margin-bottom: 30px;
 }
 
-/* SERVICIOS */
+/* ESPACIADO ENTRE BLOQUES */
+.vintage-box,
+.services-grid,
+.aliados-section,
+.process-grid,
+.monitor-screen {
+    margin-bottom: 48px;
+}
+
+.process-grid,
+.aliados-section,
+.monitor-screen {
+    margin-top: 8px;
+}
+
+/* ================= SERVICIOS ================= */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -173,7 +190,7 @@ body {
     color: var(--yellow);
 }
 
-/* PROCESO */
+/* ================= PROCESO ================= */
 .process-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -188,7 +205,7 @@ body {
     box-shadow: 7px 7px 0px var(--ink);
 }
 
-/* CONTACTO */
+/* ================= CONTACTO ================= */
 .monitor-screen {
     background: white;
     border: 4px solid var(--ink);
@@ -208,7 +225,7 @@ body {
     font-weight: bold;
 }
 
-/* SLIDER */
+/* ================= SLIDER ================= */
 .aliados-section {
     overflow: hidden;
     border: 4px solid var(--ink);
@@ -239,7 +256,7 @@ body {
     100% { transform: translateX(calc(-200px * 9)); }
 }
 
-/* WHATSAPP */
+/* ================= WHATSAPP ================= */
 .whatsapp-float {
     position: fixed;
     right: 15px;
@@ -254,7 +271,7 @@ body {
     box-shadow: 5px 5px 0px var(--ink);
 }
 
-/* MODAL */
+/* ================= MODAL ================= */
 .modal {
     display: none;
     position: fixed;
@@ -276,9 +293,7 @@ body {
     gap: 15px;
 }
 
-/* ======================= */
-/* 📱 MOBILE FIX REAL */
-/* ======================= */
+/* ================= RESPONSIVE ================= */
 
 @media (max-width: 768px) {
 
@@ -313,7 +328,6 @@ body {
         width: 90%;
         text-align: center;
         font-size: 0.9rem;
-        text-decoration: none !important;
     }
 
     .services-grid {
@@ -335,6 +349,13 @@ body {
 
     .slide img {
         width: 80px;
+    }
+}
+
+/* AJUSTE PRO PARA DESKTOP (composición visual) */
+@media (min-width: 769px) {
+    .hero-content {
+        transform: translateX(-60px);
     }
 }
 
