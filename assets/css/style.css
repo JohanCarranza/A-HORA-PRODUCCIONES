@@ -418,3 +418,188 @@ body {
         padding: 0 20px;
     }
 }
+@media (max-width: 900px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+    }
+
+    .service-card p {
+        min-height: auto;
+    }
+
+    .container {
+        width: 92%;
+    }
+
+    .vintage-box,
+    .service-card,
+    .monitor-screen,
+    .process-step,
+    .aliados-section {
+        box-shadow: 6px 6px 0px var(--ink);
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 92%;
+        padding: 24px 0;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 50px 0 40px;
+        background-position: center;
+    }
+
+    .hero-content {
+        padding: 20px 0;
+    }
+
+    .hero-tag {
+        font-size: 0.75rem;
+        padding: 6px 10px;
+        box-shadow: 4px 4px 0px var(--ink);
+        margin-bottom: 16px;
+    }
+
+    .main-title {
+        font-size: 2.4rem;
+        text-shadow: 2px 2px 0px var(--yellow);
+    }
+
+    .sub-title {
+        font-size: 1rem;
+        letter-spacing: 2px;
+        margin: 8px 0 18px;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        padding: 14px;
+        margin-bottom: 22px;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+        padding: 12px 14px;
+        font-size: 0.85rem;
+        box-shadow: 4px 4px 0px var(--ink);
+    }
+
+    .tape-label {
+        font-size: 0.75rem;
+        padding: 5px 10px;
+        margin-bottom: -8px;
+    }
+
+    .vintage-box,
+    .service-card,
+    .monitor-screen,
+    .process-step,
+    .aliados-section {
+        padding: 16px;
+        border-width: 3px;
+        box-shadow: 5px 5px 0px var(--ink);
+        margin-bottom: 24px;
+    }
+
+    .service-card h3 {
+        font-size: 0.95rem;
+        line-height: 1.4;
+    }
+
+    .service-card p,
+    .intro-box p,
+    .monitor-screen p {
+        font-size: 0.92rem;
+        line-height: 1.55;
+    }
+
+    .btn-category {
+        width: 100%;
+        margin: 8px 0 0;
+        padding: 11px 12px;
+        font-size: 0.9rem;
+        box-shadow: 3px 3px 0px var(--ink);
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .process-step {
+        font-size: 0.9rem;
+        padding: 14px;
+    }
+
+    .aliados-section {
+        padding: 14px 0;
+    }
+
+    .slider-track {
+        width: calc(140px * 18);
+        animation: scrollMobile 22s linear infinite;
+    }
+
+    .slide {
+        width: 140px;
+        padding: 0 12px;
+    }
+
+    .slide img {
+        width: 80px;
+    }
+
+    .modal-content {
+        width: 94%;
+        margin: 6% auto;
+        max-height: 85vh;
+        padding: 16px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .gallery-grid iframe {
+        height: 220px !important;
+    }
+
+    .close-btn {
+        font-size: 2rem;
+        right: 14px;
+        top: 8px;
+    }
+
+    .whatsapp-float {
+        right: 12px;
+        bottom: 12px;
+        padding: 10px 14px;
+        font-size: 0.8rem;
+        box-shadow: 4px 4px 0px var(--ink);
+    }
+}
+
+@keyframes scrollMobile {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-140px * 9)); }
+}
