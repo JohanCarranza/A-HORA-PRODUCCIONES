@@ -37,7 +37,7 @@ body {
     min-height: 100vh;
     background:
         linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.65)),
-        url("../images/Deportiva1.JPG") center/cover no-repeat;
+        url("../images/Coorporativa1.jpg") center/cover no-repeat;
     border-bottom: 5px solid var(--ink);
     display: flex;
     align-items: center;
