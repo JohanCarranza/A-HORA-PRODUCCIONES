@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
         'PRODUCTO': ['./assets/images/Producto1.jpg', './assets/images/Producto2.jpg'],
         'STREAMING': ['./assets/images/streaming1.png', './assets/images/streaming2.png', './assets/images/streaming3.png', './assets/images/streaming4.png', './assets/images/streaming5.png', './assets/images/streaming6.png'],
         
-        // --- SECCIÓN VIDEOS ---
+        // VIDEOS
         'CORPORATIVO_V': 'https://player.vimeo.com/video/1176090558',
         'SOCIAL_MEDIA_V': 'https://player.vimeo.com/video/1176091837',
         'DRON_V': 'https://player.vimeo.com/video/1176094038'
@@ -23,38 +23,28 @@ document.addEventListener("DOMContentLoaded", () => {
         container.innerHTML = '';
         container.classList.remove('panoramic');
 
-        // Si es un Video (termina en _V)
         if (cat.endsWith('_V')) {
             tituloGaleria.innerText = "PROYECTO VIDEO";
             const iframe = document.createElement('iframe');
             iframe.src = fotos[cat];
-            iframe.width = "100%";
-            iframe.height = "450px";
+            iframe.style.height = "450px";
             iframe.frameBorder = "0";
-            iframe.allow = "autoplay; fullscreen; picture-in-picture";
+            iframe.allow = "autoplay; fullscreen";
             container.appendChild(iframe);
-            modal.style.display = "block";
-            return;
-        }
-
-        // Lógica para fotos (igual que antes)
-        tituloGaleria.innerText = cat === 'STREAMING' ? 'TRANSMISIONES EN VIVO' : cat;
-        if (cat === 'STREAMING') container.classList.add('panoramic');
-        
-        if (fotos[cat]) {
+        } else {
+            tituloGaleria.innerText = cat === 'STREAMING' ? 'TRANSMISIONES EN VIVO' : cat;
+            if (cat === 'STREAMING') container.classList.add('panoramic');
+            
             fotos[cat].forEach(url => {
                 const img = document.createElement('img');
                 img.src = url;
                 container.appendChild(img);
             });
-            modal.style.display = "block";
         }
+        modal.style.display = "block";
     }
 
-    window.cerrarGaleria = () => { 
-        container.innerHTML = ''; // Limpia el video al cerrar para que deje de sonar
-        modal.style.display = "none"; 
-    }
+    window.cerrarGaleria = () => { container.innerHTML = ''; modal.style.display = "none"; }
 
     document.getElementById('pautas-contenedor').innerHTML = `
         <h3 style="margin:0; font-family:'Bungee';">CONTACTO DIRECTO:</h3>
