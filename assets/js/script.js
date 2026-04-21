@@ -49,7 +49,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const iframe = document.createElement("iframe");
             iframe.src = fotos[cat];
-            iframe.style.height = "450px";
+            iframe.style.width = "100%";
+            iframe.style.height = "70vh";
+            iframe.style.minHeight = "420px";
             iframe.frameBorder = "0";
             iframe.allow = "autoplay; fullscreen; picture-in-picture";
             iframe.allowFullscreen = true;
@@ -66,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const img = document.createElement("img");
                 img.src = url;
                 img.alt = `Imagen de ${cat}`;
-                loading = "lazy";
+                img.loading = "lazy";
                 container.appendChild(img);
             });
         }
@@ -87,7 +89,9 @@ document.addEventListener("DOMContentLoaded", () => {
             Si necesitas fotografía, video, reels o streaming en vivo, escríbenos y armamos una propuesta a tu medida.
         </p>
         <a href="https://wa.me/${MI_WHATSAPP}" target="_blank" class="btn-contact">COTIZAR POR WHATSAPP</a>
-        <a href="${MI_PORTAFOLIO}" target="_blank" class="btn-contact alt-btn">VER PORTAFOLIO COMPLETO</a>
+        <a href="${MI_PORTAFOLIO}" target="_blank" class="btn-contact" style="background: var(--yellow); color: var(--ink);">
+            VER PORTAFOLIO COMPLETO
+        </a>
     `;
 
     window.addEventListener("click", (e) => {
