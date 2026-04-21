@@ -27,7 +27,7 @@ body {
 
 /* CONTENEDOR */
 .container {
-    width: min(90%, 1000px);
+    width: min(90%, 1100px);
     margin: 0 auto;
     padding: 40px 0;
 }
@@ -46,19 +46,18 @@ body {
 .hero-content {
     text-align: center;
     color: white;
-    max-width: 760px;
+    max-width: 860px;
     margin: 0 auto;
 }
 
 .hero-tag {
-    display: inline-block;
     background: var(--yellow);
     color: var(--ink);
     padding: 8px 14px;
-    font-weight: bold;
-    margin-bottom: 20px;
     border: 3px solid var(--ink);
     box-shadow: 6px 6px 0px var(--ink);
+    margin-bottom: 20px;
+    display: inline-block;
 }
 
 .main-title {
@@ -75,7 +74,6 @@ body {
 }
 
 .hero-description {
-    max-width: 700px;
     margin: 0 auto 30px;
     font-size: 1.1rem;
     line-height: 1.7;
@@ -93,7 +91,6 @@ body {
 
 .btn-primary,
 .btn-secondary {
-    display: inline-block;
     padding: 14px 22px;
     text-decoration: none;
     font-family: 'Bungee', cursive;
@@ -122,10 +119,24 @@ body {
     background: var(--ink);
     color: white;
     padding: 6px 14px;
-    display: inline-block;
     transform: rotate(-2deg);
-    margin-bottom: -14px;
-    font-size: 0.9rem;
+    margin-bottom: -10px;
+    display: inline-block;
+}
+
+/* MÁS ESPACIO REAL */
+.vintage-box,
+.services-grid,
+.aliados-section,
+.process-grid,
+.monitor-screen {
+    margin-bottom: 70px;
+}
+
+.aliados-section,
+.process-grid,
+.monitor-screen {
+    margin-top: 18px;
 }
 
 .vintage-box {
@@ -135,42 +146,27 @@ body {
     box-shadow: 10px 10px 0px var(--ink);
 }
 
-/* ESPACIADO ENTRE BLOQUES */
-.vintage-box,
-.services-grid,
-.aliados-section,
-.process-grid,
-.monitor-screen {
-    margin-bottom: 48px;
-}
-
-.process-grid,
-.aliados-section,
-.monitor-screen {
-    margin-top: 8px;
-}
-
 /* ================= SERVICIOS ================= */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 24px;
 }
 
 .service-card {
     background: white;
     border: 4px solid var(--ink);
-    padding: 20px;
+    padding: 24px;
     box-shadow: 8px 8px 0px var(--ink);
 }
 
 .service-card h3 {
     font-family: 'Bungee';
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .service-card p {
-    margin-bottom: 15px;
+    margin-bottom: 18px;
     line-height: 1.6;
 }
 
@@ -181,7 +177,7 @@ body {
     padding: 10px;
     cursor: pointer;
     box-shadow: 4px 4px 0px var(--ink);
-    margin: 5px 0;
+    margin-top: 6px;
     width: 100%;
 }
 
@@ -194,15 +190,16 @@ body {
 .process-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
+    gap: 24px;
 }
 
 .process-step {
     background: white;
     border: 4px solid var(--ink);
-    padding: 20px;
+    padding: 28px 20px;
     text-align: center;
     box-shadow: 7px 7px 0px var(--ink);
+    line-height: 1.5;
 }
 
 /* ================= CONTACTO ================= */
@@ -219,9 +216,8 @@ body {
     color: white;
     padding: 14px;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 12px;
     text-decoration: none;
-    font-family: 'Special Elite';
     font-weight: bold;
 }
 
@@ -249,11 +245,6 @@ body {
 .slide img {
     width: 100px;
     filter: grayscale(100%);
-}
-
-@keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(calc(-200px * 9)); }
 }
 
 /* ================= WHATSAPP ================= */
@@ -297,13 +288,6 @@ body {
 
 @media (max-width: 768px) {
 
-    .hero {
-        background:
-            linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.75)),
-            url("../images/Deportiva1.JPG") center/cover no-repeat !important;
-        padding: 40px 0;
-    }
-
     .main-title {
         font-size: 2.4rem;
     }
@@ -311,11 +295,6 @@ body {
     .sub-title {
         font-size: 1rem;
         letter-spacing: 2px;
-    }
-
-    .hero-description {
-        font-size: 0.95rem;
-        padding: 14px;
     }
 
     .hero-cta {
@@ -327,7 +306,6 @@ body {
     .btn-secondary {
         width: 90%;
         text-align: center;
-        font-size: 0.9rem;
     }
 
     .services-grid {
@@ -337,29 +315,4 @@ body {
     .process-grid {
         grid-template-columns: 1fr;
     }
-
-    .slider-track {
-        width: calc(140px * 18);
-        animation: scrollMobile 20s linear infinite;
-    }
-
-    .slide {
-        width: 140px;
-    }
-
-    .slide img {
-        width: 80px;
-    }
-}
-
-/* AJUSTE PRO PARA DESKTOP (composición visual) */
-@media (min-width: 769px) {
-    .hero-content {
-        transform: translateX(-60px);
-    }
-}
-
-@keyframes scrollMobile {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(calc(-140px * 9)); }
 }
