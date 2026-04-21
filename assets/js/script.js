@@ -10,9 +10,9 @@ document.addEventListener("DOMContentLoaded", () => {
         'STREAMING': ['./assets/images/streaming1.png', './assets/images/streaming2.png', './assets/images/streaming3.png', './assets/images/streaming4.png', './assets/images/streaming5.png', './assets/images/streaming6.png'],
         
         // VIDEOS
-        'CORPORATIVO_V': 'https://player.vimeo.com/video/1176090558',
-        'SOCIAL_MEDIA_V': 'https://player.vimeo.com/video/1176091837',
-        'DRON_V': 'https://player.vimeo.com/video/1176094038'
+        'CORPORATIVO_V': 'https://player.vimeo.com/video/1176090558?autoplay=1&muted=1&loop=1',
+        'SOCIAL_MEDIA_V': 'https://player.vimeo.com/video/1176091837?autoplay=1&muted=1&loop=1',
+        'DRON_V': 'https://player.vimeo.com/video/1176094038?autoplay=1&muted=1&loop=1'
     };
 
     const modal = document.getElementById("modal-galeria");
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
             iframe.src = fotos[cat];
             iframe.style.height = "450px";
             iframe.frameBorder = "0";
-            iframe.allow = "autoplay; fullscreen";
+            iframe.allow = "autoplay; fullscreen; picture-in-picture";
             container.appendChild(iframe);
         } else {
             tituloGaleria.innerText = cat === 'STREAMING' ? 'TRANSMISIONES EN VIVO' : cat;
