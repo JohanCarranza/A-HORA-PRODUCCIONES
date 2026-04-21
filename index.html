@@ -1,89 +1,132 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>A-HORA PRODUCCIONES</title>
     <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Special+Elite&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 <body>
     <header class="hero">
-        <h1 class="main-title">A-HORA</h1>
-        <h2 class="sub-title">PRODUCCIONES</h2>
+        <div class="hero-overlay">
+            <div class="hero-content container">
+                <p class="hero-tag">FOTO · VIDEO · STREAMING</p>
+                <h1 class="main-title">A-HORA</h1>
+                <h2 class="sub-title">PRODUCCIONES</h2>
+
+                <p class="hero-description">
+                    Producción audiovisual para marcas, eventos y deportes.
+                    Creamos contenido que impacta, conecta y hace que tu proyecto se vea profesional.
+                </p>
+
+                <div class="hero-cta">
+                    <a href="#servicios" class="btn-primary">VER SERVICIOS</a>
+                    <a href="https://wa.me/51945518609" target="_blank" class="btn-secondary">COTIZAR POR WHATSAPP</a>
+                </div>
+            </div>
+        </div>
     </header>
 
     <main class="container">
-        <div class="tape-label">¿QUIÉNES SOMOS?</div>
-        <div class="vintage-box">
+        <div class="tape-label">¿QUÉ HACEMOS?</div>
+        <section class="vintage-box intro-box">
             <h2>A-HORA PRODUCCIONES</h2>
-            <p>En A-HORA Producciones ejecutamos soluciones visuales de alto nivel. Somos una productora integral especializada en fotografía, filmmaking y transmisiones en vivo, diseñada para proyectos que exigen precisión técnica y resultados inmediatos.
+            <p>
+                En A-HORA Producciones realizamos fotografía, filmmaking, reels y transmisiones en vivo
+                para marcas, empresas, eventos y proyectos deportivos.
+            </p>
+            <p>
+                No solo grabamos: ayudamos a que tu marca, evento o proyecto se vea sólido, profesional
+                y listo para generar impacto.
+            </p>
+        </section>
 
-                
-Si sucede ahora, nosotros lo hacemos real.</p>
-        </div>
-
-        <div class="work-row">
-            <div class="row-header">📸 PORTAFOLIO FOTOGRÁFICO</div>
-            <div class="row-buttons">
+        <div class="tape-label">SERVICIOS</div>
+        <section id="servicios" class="services-grid">
+            <article class="service-card">
+                <h3>📸 FOTOGRAFÍA</h3>
+                <p>Sesiones deportivas, corporativas, sociales y de producto con enfoque profesional.</p>
                 <button class="btn-category" onclick="abrirGaleria('DEPORTIVA')">DEPORTIVA</button>
                 <button class="btn-category" onclick="abrirGaleria('CORPORATIVA')">CORPORATIVA</button>
                 <button class="btn-category" onclick="abrirGaleria('EVENTOS')">EVENTO SOCIAL</button>
                 <button class="btn-category" onclick="abrirGaleria('PRODUCTO')">PRODUCTO</button>
-            </div>
-        </div>
+            </article>
 
-        <div class="work-row">
-            <div class="row-header">🎬 STREAMING EN VIVO</div>
-            <div class="row-buttons">
-                <button class="btn-category" style="background:var(--ink); color:var(--yellow);" onclick="abrirGaleria('STREAMING')">VER TRANSMISIONES</button>
-            </div>
-        </div>
+            <article class="service-card">
+                <h3>🎬 STREAMING EN VIVO</h3>
+                <p>Transmisiones con ejecución técnica para eventos, deportes y proyectos en tiempo real.</p>
+                <button class="btn-category dark-btn" onclick="abrirGaleria('STREAMING')">VER TRANSMISIONES</button>
+            </article>
 
-        <div class="work-row">
-            <div class="row-header">🎞️ FILMMAKING / REELS</div>
-            <div class="row-buttons">
+            <article class="service-card">
+                <h3>🎞️ FILMMAKING / REELS</h3>
+                <p>Videos corporativos, contenido para redes y tomas con dron para elevar tu presencia visual.</p>
                 <button class="btn-category" onclick="abrirGaleria('CORPORATIVO_V')">CORPORATIVO</button>
                 <button class="btn-category" onclick="abrirGaleria('SOCIAL_MEDIA_V')">SOCIAL MEDIA</button>
                 <button class="btn-category" onclick="abrirGaleria('DRON_V')">DRON</button>
+            </article>
+        </section>
+
+        <div class="tape-label">PORTAFOLIO</div>
+        <section class="vintage-box">
+            <h2>Contenido visual con intención</h2>
+            <p>
+                Explora nuestros trabajos por categoría y conoce cómo llevamos cada idea a una ejecución visual potente.
+            </p>
+            <div class="cta-inline">
+                <a href="https://www.behance.net/gallery/246257859/PORTFOLIO-A-HORA" target="_blank" class="btn-contact alt-btn">
+                    VER PORTAFOLIO COMPLETO
+                </a>
             </div>
-        </div>
+        </section>
 
         <div class="tape-label">ELLOS CONFÍAN EN NOSOTROS</div>
-        <div class="aliados-section">
+        <section class="aliados-section">
             <div class="slider-track">
-                <div class="slide"><img src="./assets/images/Marca1.png"></div>
-                <div class="slide"><img src="./assets/images/Marca2.png"></div>
-                <div class="slide"><img src="./assets/images/Marca3.png"></div>
-                <div class="slide"><img src="./assets/images/Marca4.png"></div>
-                <div class="slide"><img src="./assets/images/Marca5.png"></div>
-                <div class="slide"><img src="./assets/images/Marca6.png"></div>
-                <div class="slide"><img src="./assets/images/Marca7.jpg"></div>
-                <div class="slide"><img src="./assets/images/Marca8.jpg"></div>
-                <div class="slide"><img src="./assets/images/Marca9.png"></div>
-                <div class="slide"><img src="./assets/images/Marca1.png"></div>
-                <div class="slide"><img src="./assets/images/Marca2.png"></div>
-                <div class="slide"><img src="./assets/images/Marca3.png"></div>
-                <div class="slide"><img src="./assets/images/Marca4.png"></div>
-                <div class="slide"><img src="./assets/images/Marca5.png"></div>
-                <div class="slide"><img src="./assets/images/Marca6.png"></div>
-                <div class="slide"><img src="./assets/images/Marca7.jpg"></div>
-                <div class="slide"><img src="./assets/images/Marca8.jpg"></div>
-                <div class="slide"><img src="./assets/images/Marca9.png"></div>
-            </div>
-        </div>
+                <div class="slide"><img src="./assets/images/Marca1.png" alt="Marca 1"></div>
+                <div class="slide"><img src="./assets/images/Marca2.png" alt="Marca 2"></div>
+                <div class="slide"><img src="./assets/images/Marca3.png" alt="Marca 3"></div>
+                <div class="slide"><img src="./assets/images/Marca4.png" alt="Marca 4"></div>
+                <div class="slide"><img src="./assets/images/Marca5.png" alt="Marca 5"></div>
+                <div class="slide"><img src="./assets/images/Marca6.png" alt="Marca 6"></div>
+                <div class="slide"><img src="./assets/images/Marca7.jpg" alt="Marca 7"></div>
+                <div class="slide"><img src="./assets/images/Marca8.jpg" alt="Marca 8"></div>
+                <div class="slide"><img src="./assets/images/Marca9.png" alt="Marca 9"></div>
 
-        <div class="tape-label">CENTRAL DE CONTROL</div>
-        <div id="pautas-contenedor" class="monitor-screen"></div>
+                <div class="slide"><img src="./assets/images/Marca1.png" alt="Marca 1"></div>
+                <div class="slide"><img src="./assets/images/Marca2.png" alt="Marca 2"></div>
+                <div class="slide"><img src="./assets/images/Marca3.png" alt="Marca 3"></div>
+                <div class="slide"><img src="./assets/images/Marca4.png" alt="Marca 4"></div>
+                <div class="slide"><img src="./assets/images/Marca5.png" alt="Marca 5"></div>
+                <div class="slide"><img src="./assets/images/Marca6.png" alt="Marca 6"></div>
+                <div class="slide"><img src="./assets/images/Marca7.jpg" alt="Marca 7"></div>
+                <div class="slide"><img src="./assets/images/Marca8.jpg" alt="Marca 8"></div>
+                <div class="slide"><img src="./assets/images/Marca9.png" alt="Marca 9"></div>
+            </div>
+        </section>
+
+        <div class="tape-label">¿CÓMO TRABAJAMOS?</div>
+        <section class="process-grid">
+            <div class="process-step">1. Nos cuentas tu idea</div>
+            <div class="process-step">2. Definimos propuesta y enfoque</div>
+            <div class="process-step">3. Ejecutamos la producción</div>
+            <div class="process-step">4. Entregamos el material final</div>
+        </section>
+
+        <div class="tape-label">CONTACTO DIRECTO</div>
+        <section id="pautas-contenedor" class="monitor-screen"></section>
     </main>
 
     <div id="modal-galeria" class="modal">
         <div class="modal-content vintage-box">
             <span class="close-btn" onclick="cerrarGaleria()">&times;</span>
-            <h2 id="modal-titulo" style="font-family:'Bungee'; border-bottom: 3px solid var(--yellow); display:inline-block;">GALERÍA</h2>
+            <h2 id="modal-titulo" class="modal-title">GALERÍA</h2>
             <div id="modal-imagenes" class="gallery-grid"></div>
         </div>
     </div>
+
+    <a href="https://wa.me/51945518609" target="_blank" class="whatsapp-float">WhatsApp</a>
 
     <script src="./assets/js/script.js"></script>
 </body>
