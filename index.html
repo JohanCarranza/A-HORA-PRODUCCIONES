@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A-HORA PRODUCCIONES | Portfolio</title>
+    <title>A-Hora Prod. | Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Special+Elite&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
@@ -13,44 +13,43 @@
         <h2 class="sub-title">PRODUCCIONES</h2>
     </header>
 
-    <main class="landing-container">
-        
-        <section class="landing-section">
-            <div class="section-text">
-                <h2>FOTOGRAFÍA</h2>
-                <p>Narrativa visual en cada disparo. Capturamos momentos únicos con estética cinematográfica.</p>
-                <div class="row-buttons">
-                    <button class="btn-category" onclick="abrirGaleria('DEPORTIVA')">DEPORTIVA</button>
-                    <button class="btn-category" onclick="abrirGaleria('CORPORATIVA')">CORPORATIVA</button>
-                    <button class="btn-category" onclick="abrirGaleria('EVENTOS')">SOCIAL</button>
-                    <button class="btn-category" onclick="abrirGaleria('PRODUCTO')">PRODUCTO</button>
-                </div>
-            </div>
-            <div class="section-visual">
-                <img src="./assets/images/Social1.jpg" alt="Preview Foto" style="width:100%; display:block;">
-            </div>
-        </section>
+    <main class="container">
+        <div class="tape-label">IDENTIDAD</div>
+        <div class="vintage-box">
+            <h2>SOMOS A-HORA</h2>
+            <p>Capturamos el presente con la estética del pasado y la tecnología del futuro.</p>
+        </div>
 
-        <section class="landing-section reverse">
-            <div class="section-text">
-                <h2>STREAMING</h2>
-                <p>Transmisiones en vivo de alta fidelidad. Llevamos tu evento a todo el mundo con calidad de TV.</p>
+        <div class="work-row">
+            <div class="row-header">📸 PORTAFOLIO FOTOGRÁFICO</div>
+            <div class="row-buttons">
+                <button class="btn-category" onclick="abrirGaleria('DEPORTIVA')">DEPORTIVA</button>
+                <button class="btn-category" onclick="abrirGaleria('CORPORATIVA')">CORPORATIVA</button>
+                <button class="btn-category" onclick="abrirGaleria('EVENTOS')">EVENTO SOCIAL</button>
+                <button class="btn-category" onclick="abrirGaleria('PRODUCTO')">PRODUCTO</button>
+            </div>
+        </div>
+
+        <div class="work-row">
+            <div class="row-header">🎬 STREAMING EN VIVO</div>
+            <div class="row-buttons">
                 <button class="btn-category" style="background:var(--ink); color:var(--yellow);" onclick="abrirGaleria('STREAMING')">VER TRANSMISIONES</button>
             </div>
-            <div class="section-visual">
-                <img src="./assets/images/streaming1.png" alt="Preview Streaming" style="width:100%; display:block;">
-            </div>
-        </section>
+        </div>
 
-        <div class="monitor-wide" id="pautas-contenedor">
-            </div>
+        <div class="work-row">
+            <div class="row-header">🎞️ FILMMAKING</div>
+            <p style="font-size: 0.8rem; opacity: 0.7;">Proyectos en post-producción...</p>
+        </div>
 
+        <div class="tape-label">CENTRAL DE CONTROL</div>
+        <div id="pautas-contenedor" class="monitor-screen"></div>
     </main>
 
     <div id="modal-galeria" class="modal">
-        <div class="modal-content">
+        <div class="modal-content vintage-box">
             <span class="close-btn" onclick="cerrarGaleria()">&times;</span>
-            <h2 id="modal-titulo" style="font-family:'Bungee';">GALERÍA</h2>
+            <h2 id="modal-titulo" style="font-family:'Bungee'; border-bottom: 3px solid var(--yellow); display:inline-block;">GALERÍA</h2>
             <div id="modal-imagenes" class="gallery-grid"></div>
         </div>
     </div>
