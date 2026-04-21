@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById('pautas-contenedor').innerHTML = `
         <h3 style="margin:0; font-family:'Bungee';">CONTACTO DIRECTO:</h3>
         <a href="https://wa.me/${MI_WHATSAPP}" target="_blank" class="btn-contact">WHATSAPP</a>
-        <a href="${MI_PORTAFOLIO}" target="_blank" class="btn-contact" style="background:#fff; color:#1a1a1a">BEHANCE</a>
+        <a href="${MI_PORTAFOLIO}" target="_blank" class="btn-contact" style="background:#fff; color:#1a1a1a">PORTAFOLIO COMPLETO</a>
     `;
 
     window.onclick = (e) => { if (e.target == modal) cerrarGaleria(); };
