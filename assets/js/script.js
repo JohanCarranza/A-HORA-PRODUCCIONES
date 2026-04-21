@@ -7,14 +7,12 @@ document.addEventListener("DOMContentLoaded", () => {
         'CORPORATIVA': ['./assets/images/Coorporativa.jpg', './assets/images/Coorporativa1.jpg', './assets/images/Coorporativa2.jpg'],
         'EVENTOS': ['./assets/images/Social1.jpg', './assets/images/Social2.jpg', './assets/images/Social3.jpg'],
         'PRODUCTO': ['./assets/images/Producto1.jpg', './assets/images/Producto2.jpg'],
-        'STREAMING': [
-            './assets/images/streaming1.png', 
-            './assets/images/streaming2.png', 
-            './assets/images/streaming3.png', 
-            './assets/images/streaming4.png',
-            './assets/images/streaming5.png',
-            './assets/images/streaming6.png'
-        ]
+        'STREAMING': ['./assets/images/streaming1.png', './assets/images/streaming2.png', './assets/images/streaming3.png', './assets/images/streaming4.png', './assets/images/streaming5.png', './assets/images/streaming6.png'],
+        
+        // --- SECCIÓN VIDEOS ---
+        'CORPORATIVO_V': 'https://player.vimeo.com/video/1176090558',
+        'SOCIAL_MEDIA_V': 'https://player.vimeo.com/video/1176091837',
+        'DRON_V': 'https://player.vimeo.com/video/1176094038'
     };
 
     const modal = document.getElementById("modal-galeria");
@@ -22,16 +20,27 @@ document.addEventListener("DOMContentLoaded", () => {
     const tituloGaleria = document.getElementById("modal-titulo");
 
     window.abrirGaleria = (cat) => {
-        tituloGaleria.innerText = cat === 'STREAMING' ? 'TRANSMISIONES EN VIVO' : cat;
         container.innerHTML = '';
-        
-        // Si es Streaming, añadimos la clase 'panoramic' para que se vean grandes
-        if (cat === 'STREAMING') {
-            container.classList.add('panoramic');
-        } else {
-            container.classList.remove('panoramic');
+        container.classList.remove('panoramic');
+
+        // Si es un Video (termina en _V)
+        if (cat.endsWith('_V')) {
+            tituloGaleria.innerText = "PROYECTO VIDEO";
+            const iframe = document.createElement('iframe');
+            iframe.src = fotos[cat];
+            iframe.width = "100%";
+            iframe.height = "450px";
+            iframe.frameBorder = "0";
+            iframe.allow = "autoplay; fullscreen; picture-in-picture";
+            container.appendChild(iframe);
+            modal.style.display = "block";
+            return;
         }
 
+        // Lógica para fotos (igual que antes)
+        tituloGaleria.innerText = cat === 'STREAMING' ? 'TRANSMISIONES EN VIVO' : cat;
+        if (cat === 'STREAMING') container.classList.add('panoramic');
+        
         if (fotos[cat]) {
             fotos[cat].forEach(url => {
                 const img = document.createElement('img');
@@ -42,7 +51,10 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    window.cerrarGaleria = () => { modal.style.display = "none"; }
+    window.cerrarGaleria = () => { 
+        container.innerHTML = ''; // Limpia el video al cerrar para que deje de sonar
+        modal.style.display = "none"; 
+    }
 
     document.getElementById('pautas-contenedor').innerHTML = `
         <h3 style="margin:0; font-family:'Bungee';">CONTACTO DIRECTO:</h3>
