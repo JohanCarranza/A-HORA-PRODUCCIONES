@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
-const scriptURL = 'https://script.google.com/macros/s/AKfycbx864ctxaAA28nFKIE4bkznxRPFZ0BgwDrqCtvDdYylYusSOgtowvH5xQ_wUC2oSd7oDQ/exec';
+const scriptURL = 'https://script.google.com/macros/s/AKfycbweGlxhku2NyXUKE9yiHq6BZc4gCib_W3MXm9pQXUspDy6YXfQOUGdZZOcLNm2soLJV/exec';
 const form = document.getElementById('pro-form');
 const status = document.getElementById('form-status');
 
