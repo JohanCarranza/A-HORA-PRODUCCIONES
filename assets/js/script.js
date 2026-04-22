@@ -102,3 +102,22 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+const scriptURL = 'https://script.google.com/macros/s/AKfycbx864ctxaAA28nFKIE4bkznxRPFZ0BgwDrqCtvDdYylYusSOgtowvH5xQ_wUC2oSd7oDQ/exec';
+const form = document.getElementById('pro-form');
+const status = document.getElementById('form-status');
+
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  status.style.display = "block";
+  status.innerText = "Enviando...";
+  
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => {
+        status.innerText = "¡Mensaje enviado con éxito! Nos contactaremos pronto.";
+        form.reset();
+    })
+    .catch(error => {
+        status.innerText = "Error al enviar. Intenta por WhatsApp.";
+        console.error('Error!', error.message);
+    });
+});
